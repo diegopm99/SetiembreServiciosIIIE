@@ -54,7 +54,7 @@ public class ProductoController {
 	public ResponseEntity<?> actualizar(@RequestBody Producto p,@PathVariable Integer id){
 		//producto.setId_producto(id);
 
-		Producto producto = service.obtener(p.getId_producto());
+		Producto producto = service.obtener(p.getIdProducto());
 		if (producto!= null) {
 			service.actualizar(producto);
 			return new ResponseEntity<>(producto,HttpStatus.OK);

@@ -1,8 +1,8 @@
-package com.example.demo.repository;
+package com.idat.SetiembreIIIE.repository;
 
 import java.util.List;
 
-import com.example.demo.model.Producto;
+import com.idat.SetiembreIIIE.model.Producto;
 
 public interface ProductoRepository {
 	
@@ -11,4 +11,5 @@ public interface ProductoRepository {
 	void eliminar(Integer id);
 	List<Producto> listar();
 	Producto obtener(Integer id);
+
 }

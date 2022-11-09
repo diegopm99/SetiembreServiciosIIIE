@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.idat.SetiembreIIIE.service;
 
 import java.util.List;
 
-import com.example.demo.model.Producto;
+import com.idat.SetiembreIIIE.model.Producto;
 
 public interface ProductoService {
 

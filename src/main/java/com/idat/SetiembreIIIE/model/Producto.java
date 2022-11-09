@@ -1,32 +1,19 @@
-package com.example.demo.model;
+package com.idat.SetiembreIIIE.model;
 
 public class Producto {
-	private Integer id_producto;
-	private String nombreProducto;
+
+	private Integer idProducto;
+	private String nombreProducto ;
 	private String descripcion;
 	private Double precio;
-	private Integer stock;
+	private Integer stock; 
 	
 	
-	public Producto(Integer id_producto, String nombreProducto, String descripcion, Double precio, Integer stock) {
-		super();
-		this.id_producto = id_producto;
-		this.nombreProducto = nombreProducto;
-		this.descripcion = descripcion;
-		this.precio = precio;
-		this.stock = stock;
+	public Integer getIdProducto() {
+		return idProducto;
 	}
-	
-	public Producto() {
-		super();
-	}
-
-
-	public Integer getId_producto() {
-		return id_producto;
-	}
-	public void setId_producto(Integer id_producto) {
-		this.id_producto = id_producto;
+	public void setIdProducto(Integer idProducto) {
+		this.idProducto = idProducto;
 	}
 	public String getNombreProducto() {
 		return nombreProducto;
@@ -52,7 +39,5 @@ public class Producto {
 	public void setStock(Integer stock) {
 		this.stock = stock;
 	}
-	
-	
 
 }

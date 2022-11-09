@@ -1,5 +1,6 @@
 package com.idat.SetiembreIIIE.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -10,11 +11,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="items")
+@Table(name="item")
 public class Item {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_item")
 	private Integer idItem;
 	private String item;
 	private Integer cantidad;

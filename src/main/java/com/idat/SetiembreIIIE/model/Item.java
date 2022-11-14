@@ -1,5 +1,6 @@
 package com.idat.SetiembreIIIE.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -10,11 +11,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="items")
+@Table(name="item")
 public class Item {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_item")
 	private Integer idItem;
 	private String item;
 	private Integer cantidad;
@@ -24,8 +26,8 @@ public class Item {
 	@JoinColumn(
 			name="id_cliente",
 			nullable = false,
-			unique = true,
-			foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_cliente) references clientes(id_cliente)")
+			unique = false,
+			foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_cliente) references cliente(id_cliente)")
 	)
 	private Cliente cliente;
 	
@@ -52,6 +54,12 @@ public class Item {
 	}
 	public void setTotal(Double total) {
 		this.total = total;
+	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 	
 

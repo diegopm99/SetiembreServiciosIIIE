@@ -27,7 +27,7 @@ public class ProductoController {
 	}
 	
 	@RequestMapping(path="/guardar", method = RequestMethod.POST)
-	public ResponseEntity<Void> guardar(@RequestBody Producto producto ){
+	public ResponseEntity<Void> guardar(@RequestBody Producto producto){
 		service.guardar(producto);
 		return new ResponseEntity<Void>(HttpStatus.CREATED);
 	}

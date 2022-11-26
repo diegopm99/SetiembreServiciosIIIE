@@ -39,13 +39,13 @@ public class Producto {
 					name="id_producto",
 					nullable = false,
 					unique = true,
-					foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key(id_producto) references productos(id_producto)")
+					foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key(id_producto) references producto(id_producto)")
 			),
 			inverseJoinColumns = @JoinColumn(
 					name="id_cliente",
 					nullable = false,
 					unique = true,
-					foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key(id_cliente) references clientes(id_cliente)")
+					foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key(id_cliente) references cliente(id_cliente)")
 			)
 	)
 	private List<Cliente> clientes = new ArrayList<>();

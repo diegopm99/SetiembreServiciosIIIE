@@ -1,0 +1,1 @@
+insert into usuario(usuario, contrasenia, rol) values ("diego", "$2a$12$0lwY7meylGb2eYgPcmmGm.XJW5FVatmdIvfTAVgDzXlnaT4CcRgrS", "ROLE_ALUMNO")

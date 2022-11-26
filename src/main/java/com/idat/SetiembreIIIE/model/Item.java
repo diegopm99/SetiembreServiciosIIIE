@@ -27,7 +27,7 @@ public class Item {
 			name="id_cliente",
 			nullable = false,
 			unique = true,
-			foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_cliente) references clientes(id_cliente)")
+			foreignKey = @ForeignKey(foreignKeyDefinition = "foreign key (id_cliente) references cliente(id_cliente)")
 	)
 	private Cliente cliente;
 	

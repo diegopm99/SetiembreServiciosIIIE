@@ -20,6 +20,8 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 //import org.springframework.security.crypto.password.PasswordEncoder;
 //import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 //import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 @EnableWebSecurity
@@ -50,8 +52,14 @@ public class ConfigSecurity extends WebSecurityConfigurerAdapter{
 	}
 	
 	@Bean
-	public TokenStore tokenStore() {
-		return new InMemoryTokenStore();
+	public JwtAccessTokenConverter accessTokenConverter() {
+		JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+		converter.setSigningKey("anyadi_pm");
+		return converter;
 	}
 	
+	@Bean
+	public JwtTokenStore tokenStore() {
+		return new JwtTokenStore(accessTokenConverter());
+	}
 }
